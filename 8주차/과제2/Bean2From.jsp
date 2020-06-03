@@ -13,6 +13,15 @@
 		border-collapse: collapse;
 	}
 	</style>
+	<script type="text/javascript">
+		function clearInput(){
+			/* 텍스트박스 지우는 부분 */
+			var text = document.getElementsByClassName('input-text');
+			for(var i=0; i<text.length; i++){
+				text[i].value = '';
+			}
+		}
+	</script>
 </head>
 <body>
 	<h2>글쓰기</h2>
@@ -23,26 +32,26 @@
 		</tr>
 		<tr>
 		<th>이름</th>
-		<td><input type="text" name="name"/></td>
+		<td><input class="input-text" type="text" name="name"/></td>
 		</tr>
 		<tr>
 		<th>제목</th>
-		<td><input type="text" name="title"/></td>
+		<td><input class="input-text" type="text" name="title"/></td>
 		</tr>
 		<tr>
 		<th>이메일</th>
-		<td><input type="text" name="mail"/></td>
+		<td><input class="input-text" type="text" name="mail"/></td>
 		</tr>
 		<tr>
 		<th>내용</th>
-		<td><textarea name="info" cols="40" rows="8" ></textarea></td>
+		<td><textarea class="input-text" name="info" cols="40" rows="8" ></textarea></td>
 		</tr>
 		<tr>
 		<th>비밀번호</th>
-		<td><input type="text" name="pwd"/></td>
+		<td><input class="input-text" type="text" name="pwd"/></td>
 		</tr>
 		<tr>
-		<th colspan="2"><input type="submit" value="글쓰기"/><input type="button" onclick="" value="다시작성"/><input type="submit" value="목록보기"/></th>
+		<th colspan="2"><input type="submit" value="글쓰기"/><input type="button" onclick="clearInput()" value="다시작성"/><input type="submit" value="목록보기"/></th>
 		</tr>
 		</form>
 	</table>
